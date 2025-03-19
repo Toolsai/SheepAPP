@@ -2,25 +2,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Count Sheep for Sleep</title>
+    <title>失眠小綿羊</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "config": "./config.js"
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1>Count Sheep for Sleep</h1>
-        <div class="sheep-container" id="sheepContainer"></div>
-        <button id="addSheepBtn">Z</button>
-        <div class="counters">
-            <div class="counter">
-                <p>Session Count</p>
-                <div id="sessionCount">0</div>
+        <div class="sheep-container" id="sheep-container"></div>
+        <div class="app-frame">
+            <div class="stars-background"></div>
+            <div class="moon"></div>
+            <div class="clouds">
+                <div class="cloud cloud1"></div>
+                <div class="cloud cloud2"></div>
+                <div class="cloud cloud3"></div>
             </div>
-            <div class="counter">
-                <p>Total Count</p>
-                <div id="totalCount">0</div>
+            
+            <div class="main-button-container">
+                <button id="sheep-button" class="sheep-button">
+                    <svg viewBox="0 0 100 100" width="80" height="80">
+                        <circle cx="50" cy="50" r="40" fill="#ffffff" />
+                        <ellipse cx="40" cy="40" rx="10" ry="15" fill="#333" />
+                        <ellipse cx="60" cy="40" rx="10" ry="15" fill="#333" />
+                        <ellipse cx="50" cy="65" rx="10" ry="5" fill="#333" />
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="counters">
+                <div class="counter-card">
+                    <div class="counter-title">本次數量</div>
+                    <div class="counter-value" id="session-count">0</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-title">總共數量</div>
+                    <div class="counter-value" id="total-count">0</div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="reset-button" class="control-button">重置本次計數</button>
+                <button id="music-button" class="control-button">播放音樂</button>
             </div>
         </div>
     </div>
-    <script type="module" src="main.js"></script>
+    
+    <script type="module" src="script.js"></script>
 </body>
 </html>
