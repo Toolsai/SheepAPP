@@ -1,15 +1,12 @@
-export const config = {
-    // Animation duration in seconds
-    sheepAnimationDuration: 4,
+export const settings = {
+    // 小綿羊顏色設定
+    sheepBodyColor: "#333333",
+    sheepWoolColor: "#FFFFFF",
     
-    // Colors
-    backgroundColor: "#1a1a2e",
-    buttonColor: "#3a6ea5",
-    counterColor: "#0f3460",
-    sheepContainerColor: "#16213e",
+    // 動畫速度設定 (秒)
+    animationDuration: 6,
     
-    // Sheep settings
-    sheepSize: 50,
-    sheepColor: "#ffffff",
-    sheepOutlineColor: "#333333"
+    // 背景音樂 URL (因為沒有實際音檔，提供一個免費的線上音樂)
+    musicUrl: "https://soundbible.com/mp3/Rain%20And%20Thunder-SoundBible.com-2127830547.mp3"
 };
+
